@@ -1,10 +1,12 @@
 <h1>Listing Texts</h1>
 
-<div class="container">
+<div class="container" id="texts">
 <% @texts.each do |text| %>
-	<div class="panel <%= ['panel-default', 'panel-success', 'panel-info', 'panel-warning', 'panel-danger'].sample %> text">
-		<div class="panel-heading" name="id"><%= text.id %></div>
-		<div class="panel-body"><%= text.text %></div>
-	</div>
+	<a href="#" onclick="getText(<%= text.id %>)" id="get_text">
+		<div class="panel <%= ['panel-default', 'panel-success', 'panel-info', 'panel-warning', 'panel-danger'].sample %> text">
+			<div class="panel-heading"><%= text.id %></div>
+			<div class="panel-body"><%= text.text %></div>
+		</div>
+	</a>
 <% end %>
 </div>
