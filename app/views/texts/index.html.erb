@@ -1,1 +1,8 @@
-texts should be here
+<h1>Listing Texts</h1>
+
+<% @texts.each do |text| %>
+	<div>
+		<%= text.id %>
+		<%= text.text %>
+	</div>
+<% end %>
