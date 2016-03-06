@@ -1,5 +1,5 @@
 class TextsController < ApplicationController
 	def index
-		@texts = Text.all
+		@texts = Text.all.shuffle
 	end
 end
