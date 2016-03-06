@@ -1,8 +1,10 @@
 <h1>Listing Texts</h1>
 
+<div class="container">
 <% @texts.each do |text| %>
-	<div>
-		<%= text.id %>
-		<%= text.text %>
+	<div class="panel <%= ['panel-default', 'panel-success', 'panel-info', 'panel-warning', 'panel-danger'].sample %> text">
+		<div class="panel-heading" name="id"><%= text.id %></div>
+		<div class="panel-body"><%= text.text %></div>
 	</div>
 <% end %>
+</div>
