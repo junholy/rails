@@ -1,6 +1,6 @@
 <h1>Listing Texts</h1>
 
-<div class="container" id="texts">
+<div id="map">
 <% @texts.each do |text| %>
 	<a href="#" onclick="getText(<%= text.id %>)" id="get_text">
 		<div class="panel <%= ['panel-default', 'panel-success', 'panel-info', 'panel-warning', 'panel-danger'].sample %> text">
@@ -9,4 +9,7 @@
 		</div>
 	</a>
 <% end %>
+</div>
+
+<div id="texts">
 </div>

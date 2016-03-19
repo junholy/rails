@@ -4,4 +4,6 @@
 
 window.getText = (id) ->
 	$.ajax(url: "/texts/" + id).done (html) ->
-		$("#texts").replaceWith html
+		$("#map").addClass("col-md-6")
+		$("#texts").addClass("col-md-6")
+		$("#texts").append html
